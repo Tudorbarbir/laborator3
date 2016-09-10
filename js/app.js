@@ -1,21 +1,8 @@
 var app = angular.module("MyApp", []);
-app.controller("TestCtrl",['$scope', function($scope){
-		$scope.name='Tudor';
+app.controller("TestCtrl",['$scope', '$http', function($scope, $http){     //declaratia acestui controller ,TestCtrl-functie
+	$http.get("https://jsonplaceholder.typicode.com/users").then(function(response){
+		console.log(response.data);
+		$scope.data=response.data;
+	})									//declaratia serviciilor					
 
-		$scope.addName = function(){
-			console.log("Button Clicked");
-			console.log($scope.firstName);
-
-			$scope.names.push($scope.firstName);
-			$scope.firstName="";
-		}
-
-		$scope.delete=function(index){
-			console.log(index);
-			$scope.names.splice(index, 1);
-		}
-
-		$scope.names = [
-			'carmen', 'ion', 'barbara', 'streissand'
-		]
 }]);

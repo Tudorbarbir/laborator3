@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "homepage": "https://github.com/Tudorbarbir/Laborator2Angular",
+  "authors": [
+    "Barbir Tudor <barbirdimitris@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

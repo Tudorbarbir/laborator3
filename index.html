@@ -10,16 +10,6 @@
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	</head>
 	<body ng-controller="TestCtrl">
-		{{name}}
-		{{names}}
-		<ul>
-			<li ng-repeat="i in names">
-				{{i}}
-				{{names.indexOf(i)}}
-				<button ng-click="delete(names.indexOf(i))" class="btn btn-danger">Delete</button>
-			</li>
-		</ul>
-		<input type="text" class="form-control" ng-model="firstName"/>
-		<button ng-click="addName()" class="btn btn-primary">Add</button>
+		<div ng-include="'components/list.html'"></div>
 	</body>
 </html>
